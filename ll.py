@@ -39,6 +39,20 @@ class LinkedList:
 
         self.size += 1
 
+    def removeFirst(self):
+        if self.getSize() == 0:
+            return None
+        elif self.getSize() == 1:
+            temp = self.head
+            self.head = self.tail = None
+            self.size -= 1
+            return temp.value
+        else:
+            temp = self.head
+            self.head = self.head.next
+            self.size -= 1
+            return temp.value
+
     def removeLast(self):
         if self.head == None:
             return None
@@ -60,7 +74,7 @@ class LinkedList:
         return self.size == 0
 
 
-ll = LinkedList()
+''' ll = LinkedList()
 ll.addFirst('e')
 ll.addFirst('d')
 ll.addFirst('c')
@@ -72,3 +86,4 @@ ll.addLast('f')
 ll.printNodes()
 ll.removeLast()
 ll.printNodes()
+'''

@@ -15,8 +15,8 @@ class Heap:
 
     def remove(self):
         removed = self.__lst[0]
-        last = self.__lst.pop()
-        self.__lst[0] = last
+        self.__lst[0] = self.__lst[len(self.__lst) - 1]
+        self.__lst.pop()
         current = 0
         while current < len(self.__lst):
             leftChild = (2 * current) + 1
@@ -38,3 +38,6 @@ class Heap:
 
     def print(self):
         print(self.__lst)
+
+    def getSize(self):
+        return len(self.__lst)
