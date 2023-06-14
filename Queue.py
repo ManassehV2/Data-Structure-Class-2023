@@ -22,7 +22,7 @@ class Queue:
         return self.__elements.head.value
 
 
-def main():
+''' def main():
     q = Queue()
     q.enqueue(Student("Abebe", 97, 3))
     q.enqueue(Student("Challa", 98, 2))
@@ -33,4 +33,4 @@ def main():
     print([1, 2])
 
 
-main()
+main() '''
